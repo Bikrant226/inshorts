@@ -1,0 +1,36 @@
+
+
+form{
+    border:  5px solid black;
+    border-radius: 50px;
+    position: relative;
+    top: 20px;
+    background-color: rgb(250, 246, 246);
+}
+
+form input{
+    border: 3px solid rgb(148, 105, 230);
+    border-radius: 50px;
+    background-color: rgb(214, 218, 218);
+    position: relative;
+    left: 40%;
+    padding: 15px;
+    margin: 5px;
+}
+
+.submit{
+    position: relative;
+    left: 47%;
+    top:34px;
+    border: 3px solid rgb(148, 105, 230);
+    border-radius: 50px;
+}
+
+.switch{
+    position: relative;
+    top: 60px;
+    left:50%;
+    text-decoration:none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: small;
+}
