@@ -24,6 +24,10 @@ const contentSchema=new mongoose.Schema({
         type:String,
         required:true
     },
+    genre:{
+        type:String,
+        required:true
+    },
     timestamp:{
         type:Date,
         default:Date

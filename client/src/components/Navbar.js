@@ -4,7 +4,7 @@ import { NavLink} from 'react-router-dom';
 const Navbar=()=>{
     return(
         <div className="navbar">
-            
+           
             <div className="one">
                 <span id="i">inshorts</span>
                 <br/>

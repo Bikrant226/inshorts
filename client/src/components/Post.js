@@ -7,7 +7,9 @@ const Post=()=>{
         author:"",
         desc:"",
         link:"",    
-        linkname:""
+        linkname:"",
+        genre:""
+        
     })
 
     let x,val;
@@ -16,30 +18,27 @@ const Post=()=>{
     const handleInputs=(e)=>{
         x=e.target.name;
         val=e.target.value;
-
         setNews({...news,[x]:val})
-        console.log(x,"**",val);
-    }
-
+    }  
 
         //sending data to backend
     const submitData=async(e)=>{
         e.preventDefault();
-        const {heading,author,desc,link,linkname}=news;
-    
+        const {heading,author,desc,link,linkname,genre}=news;
          const response=await fetch('/home',{
-                 method:"POST",
-                 headers:{
+                method:"POST",
+                headers:{
                     "Content-Type":"application/json"
                 },
                 body:JSON.stringify({
-                    heading,author,desc,link,linkname 
+                    heading,author,desc,link,linkname,genre
                 })
              });
     
              
-             const data= await response.json();
-             console.log(data)
+
+            const data=await response.json()
+            
              if(data.status===422 || !data){
                  window.alert('Error in posting data');
              }else{
@@ -51,7 +50,7 @@ const Post=()=>{
 
     return(
         <React.Fragment>
-            <form method="POST" encType='multipart/form-data'>
+            <form method="POST">
             <input type="text" name="heading" placeholder="HEADING" value={news.heading} onChange={handleInputs} />
             <br/>
             <input type="text" name="author" placeholder="AUTHOR" value={news.author} onChange={handleInputs}/>
@@ -62,6 +61,8 @@ const Post=()=>{
             <br/>
             <input type="text" name="linkname" placeholder="LINKTEXT" value={news.linkname} onChange={handleInputs}/>
             <br/>
+            <input type="text" name="genre" placeholder="GENRE" value={news.genre} onChange={handleInputs}/>
+            <br/>            
             </form>
             <button type="submit" className="submit" value='POST' onClick={submitData}>POST NEWS</button>
         </React.Fragment>

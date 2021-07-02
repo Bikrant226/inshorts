@@ -1,0 +1,79 @@
+#sidebar {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background-color: #303036;
+    z-index: 999;
+    padding: 30px 0;
+    overflow-y: scroll;   
+}
+
+
+.toggle-btn{
+    position:absolute;
+    left:6px;
+    top:9px;
+}
+
+.toggle-btn span{
+    display: block;
+    width: 30px;
+    height: 5px;
+    background-color: #000000;
+    margin:5px 0;
+}
+#sidebar p{
+ border-radius: 2px;
+    font-family: sans-serif;
+    color: rgb(117, 116, 114);
+    background-color: rgb(173, 179, 179);
+    text-align: center;
+    margin: 24px;
+    border-radius: 10px;
+}
+
+h1{
+    font-family: sans-serif;
+    font-size: smaller;
+    color: #eeeef5;
+    text-align: left;
+    padding-top: 20px;
+    font-weight: lighter;
+}
+
+#sidebar p span{
+   
+    color:rgb(173, 179, 179);
+    background-color:#000;
+    padding-right: 24px;
+    margin: 10px;
+}
+
+
+#sidebar ul li {
+    list-style: none;
+    padding: 0;
+    margin-left: -45px;
+    border-bottom: 1px solid #303036;
+    border-top: 1px solid rgba(225, 225, 225, 0.05);
+}
+
+#sidebar ul li .menu-items{
+    display: block;
+    text-decoration: none;
+    color: rgb(170, 162, 162);
+    
+    border: 1px solid #303036;
+    border-radius: 5px;
+    padding: 16px;
+    font-family: sans-serif;
+
+}
+
+#sidebar ul li .menu-items:hover {
+    background-color: rgb(75, 68, 68);
+}
+
+#sidebar ul li .menu-items:active {
+    background-color: rgb(169, 179, 179);
+}

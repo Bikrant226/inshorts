@@ -1,0 +1,14 @@
+*{
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+.parent{
+    display: flex;
+}
+
+.nav2{
+    flex: 1;
+}
+

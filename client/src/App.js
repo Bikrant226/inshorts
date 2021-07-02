@@ -1,21 +1,29 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route,Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import './components/style/navbar.css';
-import Home from './components/Home';
 import About from './components/About';
 import Login from './components/Login';
+import Sidebar from './components/Sidebar';
 import Signup from './components/Signup';
 import Post from './components/Post';
+import Welcome from './components/Welcome';
+import Routes from './components/Routes';
+import './components/style/app.css'
 const App=()=>{
 
     return(
-        <div>
-            
-            <Navbar/>
-            <Route path="/home">
-                <Home/> 
-            </Route>
+        <React.Fragment>
+        <Navbar/>
+        <Switch>
+        <div className="parent">   
+           
+            <div className="nav1" >
+            <Sidebar/>
+            </div>
+            <div className="nav2">
+            <Route exact path='/' component={Welcome}/>
+            <Routes/>
             <Route path="/post">
                 <Post/> 
             </Route>
@@ -27,10 +35,12 @@ const App=()=>{
             </Route>
             <Route path="/signup">
                 <Signup/>
-            
-            </Route>            
-            
+            </Route>
+            </div>            
         </div>
+        </Switch>
+        </React.Fragment>
+       
     );
 }
 
