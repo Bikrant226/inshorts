@@ -6,6 +6,7 @@
 
 .parent{
     display: flex;
+    overflow-x: hidden;
 }
 
 .nav2{

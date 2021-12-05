@@ -14,21 +14,25 @@
 .news{
     position: relative;
     top:20px;
-    height: 60%;
+    height: 70%;
     display: flex;
-
+    width: 1000px;
     border: 1px solid rgba(5, 2, 2, 0.4);
     border-radius: 20px;
     box-shadow: 3px 3px 3px 3px rgba(48, 43, 43, 0.4);
     font-family: sans-serif;
     margin: 0 200px 20px;
+    overflow: hidden;
+
 }
 
 
 
-img{
+.news img{
     border: 15px solid white;
     border-radius: 20px;
+    height: 100%px;
+    width: 300px;
 }
 .heading{ 
     margin-top: 20px;
@@ -52,6 +56,9 @@ span{
 .desc{
     margin-top:26px;
     font-size: 15px;
+    white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
    
 }
 

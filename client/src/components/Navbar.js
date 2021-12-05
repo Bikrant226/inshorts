@@ -12,8 +12,6 @@ const Navbar=()=>{
             </div>
             <div className="links">
                 <li><NavLink id="li" to='/home'>Read</NavLink></li>
-                <li><NavLink id="li" to='/post'>Post</NavLink></li>
-                <li><NavLink id="li" to='/about'>About</NavLink></li>
                 <li><NavLink id="li" to='/login'>Login</NavLink></li>
                 <li><NavLink id="li" to='/signup'>Register</NavLink></li>    
             </div>
